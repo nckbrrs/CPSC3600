@@ -1,0 +1,89 @@
+Students: Alex Ward, Nick Barrs
+Class: CPSC3600
+Assignment: HW1 & HW2
+
+HW1
+-------------------------------------------------------------------------------
+This program is two UDP clients and one server
+	The clients are named Yeller and Checker
+	The Server is named caseInverter
+
+The purpose of the yeller client is to send messages
+	to the server which then inverts the case on each letter
+	and sends the modified message back to the client.
+	The checker client is to check the functionality of 
+	the server by sending the returned inverted message
+	back to the server a second time and checking the 
+	final recieved message for equality with the original.
+
+How to use:
+	Type 'make' to create the executables needed.
+	In on terminal type './caseInverter -p 6666' 
+		*6666 is arbitrary it is your port number it should be
+		between 5000 and 10000
+	At this point your server is running
+	This terminal should be hanging on an empty line
+	Open up another terminal
+	Type either "./yeller -p 6666 -s 127.0.0.1 -m "your Message""
+		or "./checker -p 6666 -s 127.0.0.1 -m "your Message""
+	-p comes before your server port
+	-s comes before your server name or IP
+		"localhost" will work if both terminals are on the 
+			same computer.
+	Hit enter
+	
+	For yeller you will get back the number of attempts, the time
+		elapsed, the original message, and the inverted message.
+	For checker you will get the same read out with the edition of 
+		either verified if the final message comes back the same
+		as the original or not verified otherwise.
+
+	You will have to hit CTRL-C to kill the server
+	After you kill the server it will print out the number of messages
+		recieved and the unique IP addresses that contacted it
+		while it was running.
+	
+HW2
+-------------------------------------------------------------------------------
+
+This program is two TCP clients and one server
+	The clients are named bellower and frank
+	The Server is named caseConverter
+
+The purpose of the bellower client is to send messages
+	to the server which then inverts the case on each letter
+	and sends the modified message back to the client.
+	The frank client is to check the functionality of 
+	the server by sending the returned inverted message
+	back to the server a second time and checking the 
+	final recieved message for equality with the original.
+
+How to use:
+	Type 'make' to create the executables needed.
+	In on terminal type './caseConverter -p 6666' 
+		*6666 is arbitrary it is your port number it should be
+		between 5000 and 10000
+	At this point your server is running
+	This terminal should be hanging on an empty line
+	Open up another terminal
+	Type either "./bellower -p 6666 -s 127.0.0.1 -m "your Message""
+		or "./frank -p 6666 -s 127.0.0.1 -m "your Message""
+	-p comes before your server port
+	-s comes before your server name or IP
+		"localhost" will work if both terminals are on the 
+			same computer.
+	Hit enter
+	
+	For bellower you will get back the number of attempts, the time
+		elapsed, the original message, and the inverted message.
+	For frank you will get the same read out with the edition of 
+		either verified if the final message comes back the same
+		as the original or not verified otherwise.
+
+	You will have to hit CTRL-C to kill the server
+	After you kill the server it will print out the number of messages
+		recieved and the unique IP addresses that contacted it
+		while it was running.
+	
+	
+	
